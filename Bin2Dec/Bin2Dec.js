@@ -1,15 +1,19 @@
 // let binary = [1,0,1,1,0,1,0,0];
-let binary2 = new Array();
-let decimal=0;
+// let binary2 = new Array();
+// let decimal=0;
 let decimal2 = 0; 
 let temp=0;
 
-let DigitBinary = prompt("Enter the total digit of binary code : ");
-for(let l = 0; l<=DigitBinary - 1 ;l++){
-    binary2[l] = prompt(l+1 +" : ");
+let num = prompt('Masukkan beberapa digit angka : ');
+let binary2 = [...num].map(Number);
+
+// let DigitBinary = prompt("Enter the total digit of binary code : ");
+for(let l = 0; l<=binary2.length - 1 ;l++){
+//     binary2[l] = prompt(l+1 +" : ");
     while(binary2[l] > 1 || binary2[l] < 0 || binary2[l].length < 1 || binary2[l].length > 1){
         alert("Please input a binary code correctly");
-        binary2[l] = prompt(l+1 + " : ");
+        num = prompt('Masukkan beberapa digit angka : ');
+        binary2 = [...num].map(Number);
     }
 }
 
