@@ -4,18 +4,18 @@
 let decimal2 = 0; 
 let temp=0;
 
-let num = prompt('Masukkan beberapa digit angka : ');
-let binary2 = [...num].map(Number);
-
+let num = prompt('Input the binary code : ');
+let binary2 = [...num];
 // let DigitBinary = prompt("Enter the total digit of binary code : ");
 for(let l = 0; l<=binary2.length - 1 ;l++){
 //     binary2[l] = prompt(l+1 +" : ");
-    while(binary2[l] > 1 || binary2[l] < 0 || binary2[l].length < 1 || binary2[l].length > 1){
+    while(binary2[l] > 1 || isNaN(binary2[l])){
         alert("Please input a binary code correctly");
-        num = prompt('Masukkan beberapa digit angka : ');
-        binary2 = [...num].map(Number);
+        num = prompt('Input the binary code : ');
+        binary2 = [...num];
     }
 }
+
 
 let i = 0;
 let j = (binary2.length)-1;
@@ -31,4 +31,4 @@ while(i <= j){
 // console.log("Decimal Code of ["+ binary.toString()+ "] : " +decimal);
 // console.log("");
 console.log("Dynamic Input");
-console.log("Decimal Code of ["+ binary2.toString()+ "] : " +decimal2);
+console.log("Decimal Code of "+ binary2.join("")+ " : " +decimal2);
