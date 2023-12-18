@@ -4,7 +4,8 @@
 let decimal2 = 0; 
 let temp=0;
 
-let num = prompt('Input the binary code : ');
+let num = 0;
+num = prompt('Input the binary code : ');
 let binary2 = [...num];
 // let DigitBinary = prompt("Enter the total digit of binary code : ");
 for(let l = 0; l<=binary2.length - 1 ;l++){
